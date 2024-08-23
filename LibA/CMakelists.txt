@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.6)
+
+project(liba)
+
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+
+add_library(a SHARED LibA.cpp)
+if (WIN32)
+    set_target_properties(a PROPERTIES IMPORTED_IMPLIB "${CMAKE_CURRENT_BINARY_DIR}")
+endif()

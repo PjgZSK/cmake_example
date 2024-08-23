@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.6)
+
+project(entry)
+
+add_executable(entry main.cpp test.cpp)
+target_link_libraries(entry a b)
+target_include_directories(entry PRIVATE "${CMAKE_SOURCE_DIR}/includes")

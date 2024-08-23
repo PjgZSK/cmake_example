@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.6)
+
+project(libb)
+
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+
+add_library(b SHARED LibB.cpp)
+if (WIN32)
+    set_target_properties(b PROPERTIES IMPORTED_IMPLIB "${CMAKE_CURRENT_BINARY_DIR}")
+endif()
