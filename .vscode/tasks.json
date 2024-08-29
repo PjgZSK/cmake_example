@@ -19,6 +19,12 @@
             "command": "ninja -C build",
             "group": "build",
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "CMake-Ninja gen",
+            "type": "shell",
+            "command": "CMake -B build -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+            "group": "build"
         }
     ]
 }
