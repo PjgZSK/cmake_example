@@ -4,22 +4,19 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "win-build",
             "type": "shell",
-            "windows": {
-                "options": {
-                    "shell": {
-                        "executable": "cmd.exe",
-                        "args": [
-                            "/c",
-                            "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\"",
-                            "&&"
-                        ]
-                    }
-                },
-                "command": "ninja -C build"
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": [
+                        "/c",
+                        "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\"",
+                        "&&"
+                    ]
+                }
             },
-            "command": "",
+            "command": "ninja -C build",
             "group": "build",
             "problemMatcher": "$msCompile"
         }
